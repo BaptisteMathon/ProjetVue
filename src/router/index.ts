@@ -4,6 +4,7 @@ import AddFeedView from '../views/AddFeedView.vue'
 import FeedNewsView from '../views/FeedNewsView.vue'
 import PreferencesView from '../views/PreferencesView.vue'
 import NotFoundView from '../views/NotFoundView.vue'
+import EditFeed from '../views/EditFeed.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,6 +23,12 @@ const router = createRouter({
       path: '/feed/:id',
       name: 'FeedNews',
       component: FeedNewsView,
+      props: true,
+    },
+    {
+      path: '/edit-feed/:id',
+      name: 'EditFeed',
+      component: EditFeed,
       props: true,
     },
     {

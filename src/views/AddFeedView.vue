@@ -43,7 +43,7 @@ const addFeed = () => {
 
     <form @submit.prevent="addFeed">
       <div>
-        <label for="title">Nom du flux :</label>
+        <label for="title">Nom du flux : </label>
         <input type="text" id="title" v-model="title">
       </div>
 
@@ -52,10 +52,41 @@ const addFeed = () => {
         <input type="text" id="url" v-model="url">
       </div>
 
-      <button type="submit">Enregistrer</button>
+      <button type="submit" class="add-rss">Enregistrer</button>
 
       <p v-if="errorMessage">{{ errorMessage }}</p>
     </form>
 
   </div>
 </template>
+
+<style>
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form div{
+    margin: 15px 0 25px 0;
+  }
+
+  form div input {
+    width: 200px;
+  }
+
+  .add-rss {
+    background: green;
+    color: white;
+    border: none;
+    padding: 3px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: 25px;
+  }
+
+  .add-rss:hover {
+    background: greenyellow;
+  }
+</style>

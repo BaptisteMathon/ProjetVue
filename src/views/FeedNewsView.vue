@@ -80,11 +80,13 @@ onMounted(loadFeed)
       <ul>
         <li v-for="article in filteredArticles" :key="article.link">
           <h3>{{ article.title }}</h3>
-          <p v-if="article.image"><img :src="article.image" alt="Image de l'article"></p>
+          <p v-if="article.image" class="p-image"><img :src="article.image" alt="Image de l'article"></p>
           <p>{{ article.description }}</p>
-          <a :href="article.link" target="_blank">Lire la suite</a>
-          <p style="display: none">{{ article.ids }}</p>
-          <button @click="saveToFavorites(article)">Sauvegarder</button>
+          <div class="div-info">
+            <a :href="article.link" target="_blank">Lire la suite</a>
+            <p style="display: none">{{ article.ids }}</p>
+            <button @click="saveToFavorites(article)" class="sauvegarder">Sauvegarder</button>
+          </div>
         </li>
       </ul>
     </div>
@@ -93,3 +95,31 @@ onMounted(loadFeed)
   </div>
 </template>
 
+<style>
+  .sauvegarder {
+    background: green;
+    color: white;
+    border: none;
+    padding: 3px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: 25px;
+  }
+
+  .sauvegarder:hover {
+    background: #218c74;
+  }
+
+  .p-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .div-info{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+</style>

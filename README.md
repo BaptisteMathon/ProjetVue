@@ -73,7 +73,7 @@ Cliquer sur le bouton 'Sauvegarder' de la news sélectionnée:
 ### Rechercher une news dans ses préférences:
 Accéder à la page 'Préférence' pour voir toutes les news sauvegardés. Puis faire une recherche de la news souhaité:
 
-![image](https://github.com/user-attachments/assets/1b1f1650-214d-4a9a-b4d8-9a3219ad4a19)
+![image](https://github.com/user-attachments/assets/ccd53801-0523-4ab9-845a-fb75130953f7)
 
 
 ## Exemple de site proposant des flux RSS:

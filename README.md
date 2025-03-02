@@ -4,6 +4,7 @@
 
 ```
 git clone https://github.com/BaptisteMathon/ProjetVue
+cd ProjectVue
 npm install
 npm run dev
 ```

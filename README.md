@@ -11,14 +11,15 @@ npm run dev
 ## Fonctionnement du projet: 
 
 **Les différentes fonctionnalités de l'appli Vue sont les suivantes:**
-    - Enregistrer un flux RSS
-    - Afficher la liste des flux RSS
-    - Supprimer un flux RSS
-    - Modifier les informations d'un flux RSS
-    - Afficher les news d'un flux RSS
-    - Afficher les détails d'une news
-    - Sauvegarder une news dans ces préférences
-    - Rechercher une news dans ses préférences
+
+- Enregistrer un flux RSS
+- Afficher la liste des flux RSS
+- Supprimer un flux RSS
+- Modifier les informations d'un flux RSS
+- Afficher les news d'un flux RSS
+- Afficher les détails d'une news
+- Sauvegarder une news dans ces préférences
+- Rechercher une news dans ses préférences
 
 ### Enregistrer un flux RSS:
 Accéder à la page 'Ajouter un flux', et remplir les champs suivants: 'Nom du flux' et 'URL du flux':

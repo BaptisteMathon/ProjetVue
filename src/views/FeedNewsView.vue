@@ -38,22 +38,23 @@ const fetchRSS = async (url: string, id: number) => {
 
 const saveToFavorites = (article: any) => {
   const favorites = JSON.parse(localStorage.getItem('favorites') || '[]')
+
+  let exists = false
+
   console.log(favorites.length)
   console.log(article)
   if(favorites.length !== 0){
     favorites.forEach((news: { title: any; }) => {
-      if(news.title !== article.title){
-        favorites.push(article)
-        localStorage.setItem('favorites', JSON.stringify(favorites))
-        console.log('Article sauvegardé')
-      } else {
-        console.log('Article déjà sauvegardé')
+      if(news.title === article.title){
+        exists = true
       }
     });
-  } else {
-    console.log("else")
+  }
+
+  if(!exists){
     favorites.push(article)
     localStorage.setItem('favorites', JSON.stringify(favorites))
+    console.log('Article sauvegardé')
   }
 }
 
